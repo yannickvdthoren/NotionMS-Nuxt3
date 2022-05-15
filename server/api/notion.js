@@ -2,6 +2,7 @@ import { Client } from "@notionhq/client";
 
 const config = useRuntimeConfig();
 const notion = new Client({ auth: config.NOTION_API });
+
 let page;
 
 async function getMainPage() {
@@ -14,7 +15,8 @@ async function getBlocks(blockId){
   return response;
 }
 
-export default async () => {
+export default async (req) => {
+  console.log(req)
   page = await getMainPage();
   const blocks = await getBlocks(page.id);
   return {page: page, blocks: blocks.results};
