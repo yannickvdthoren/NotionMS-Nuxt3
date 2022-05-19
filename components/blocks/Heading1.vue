@@ -1,13 +1,12 @@
 <template>
-  <p>
+  <h1>
     <Text
       v-for="(text, index) in content"
       :text="text"
-      :key="'paragraph' + index"
+      :key="'heading1' + index"
     />
-  </p>
+  </h1>
 </template>
-
 <script setup>
 const props = defineProps({
   content: {

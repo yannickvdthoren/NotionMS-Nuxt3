@@ -1,13 +1,6 @@
 <template>
-  <p>
-    <Text
-      v-for="(text, index) in content"
-      :text="text"
-      :key="'paragraph' + index"
-    />
-  </p>
+  <a :href="'/' + content.id">{{ content.child_page.title }}</a>
 </template>
-
 <script setup>
 const props = defineProps({
   content: {

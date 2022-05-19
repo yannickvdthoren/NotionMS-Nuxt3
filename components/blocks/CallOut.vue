@@ -1,13 +1,12 @@
 <template>
-  <p>
+  <div>
     <Text
-      v-for="(text, index) in content"
+      v-for="(text, index) in content.rich_text"
       :text="text"
-      :key="'paragraph' + index"
+      :key="'call_out' + index"
     />
-  </p>
+  </div>
 </template>
-
 <script setup>
 const props = defineProps({
   content: {

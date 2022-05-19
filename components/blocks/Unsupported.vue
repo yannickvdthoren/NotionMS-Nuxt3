@@ -1,13 +1,8 @@
 <template>
-  <p>
-    <Text
-      v-for="(text, index) in content"
-      :text="text"
-      :key="'paragraph' + index"
-    />
-  </p>
+  <div>
+    <span>Unsupported block type: {{ content.type }}</span>
+  </div>
 </template>
-
 <script setup>
 const props = defineProps({
   content: {

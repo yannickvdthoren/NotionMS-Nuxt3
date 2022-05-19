@@ -1,13 +1,12 @@
 <template>
-  <p>
+  <blockquote>
     <Text
       v-for="(text, index) in content"
       :text="text"
-      :key="'paragraph' + index"
+      :key="'blockquote' + index"
     />
-  </p>
+  </blockquote>
 </template>
-
 <script setup>
 const props = defineProps({
   content: {
