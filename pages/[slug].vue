@@ -1,3 +1,4 @@
+<!-- To Do: try with a kinda similar slug: Full-articles -->
 <template>
   <BlocksImageCover :cover="post.page.cover" v-if="post.page.cover !== null" />
   <h1>{{ post.page.properties.Name.title[0].plain_text }}</h1>
