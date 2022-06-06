@@ -1,6 +1,6 @@
 <template>
   <BlocksImageCover :cover="page.page.cover" v-if="page.page.cover !== null" />
-  <h1>{{ page.page.properties.title.title }}</h1>
+  <h1>{{ page.page.properties.title.title[0].plain_text }}</h1>
   <BlocksBlock
     v-for="(block, index) in page.blocks"
     :key="index"

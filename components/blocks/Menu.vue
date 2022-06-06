@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(block, index) in blocks" :key="'navItem-' + index">
         <!-- To Do: Get slug instead of id -->
-        <a :href="getSlug" v-if="block.paragraph.rich_text.length > 0">
+        <a :href="getSlug(block)" v-if="block.paragraph.rich_text.length > 0">
           {{ block.paragraph.rich_text[0].plain_text }}
         </a>
       </li>
@@ -25,7 +25,9 @@ const { data: blocks, pending } = await useFetch("/api/block", {
   },
 });
 
-const getSlug = computed((block) => {
-  console.log(block);
-});
+const getSlug = (block) => {
+  const plainText = block.paragraph.rich_text[0].plain_text;
+  const slug = slugify(plainText).toLowerCase();
+  return slug;
+};
 </script>

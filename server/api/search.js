@@ -12,6 +12,5 @@ async function searchNotion(searchQuery){
 
 export default async (req) => {
   const search = await searchNotion(req.body.searchQuery);
-  console.log(search)
   return search;
 }

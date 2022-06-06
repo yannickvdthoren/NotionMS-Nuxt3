@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import { createPage } from "@notionhq/client/build/src/api-endpoints";
 
 const config = useRuntimeConfig();
 const notion = new Client({ auth: config.NOTION_API });
