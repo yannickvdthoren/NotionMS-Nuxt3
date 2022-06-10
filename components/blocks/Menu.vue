@@ -2,9 +2,16 @@
   <nav>
     <ul>
       <li v-for="(block, index) in blocks" :key="'navItem-' + index">
-        <!-- To Do: Get slug instead of id -->
-        <a :href="getSlug(block)" v-if="block.paragraph.rich_text.length > 0">
-          {{ block.paragraph.rich_text[0].plain_text }}
+        <a
+          v-if="block.type === 'child_page'"
+          :href="route.path + '/' + slugify(block.child_page.title).toLowerCase()"
+        >
+          {{ block.child_page.title }}
+        </a>
+        <a
+          v-else
+        >
+          <BlocksLinkToPage :content="block" />
         </a>
       </li>
     </ul>
@@ -12,6 +19,8 @@
 </template>
 <script setup>
 import slugify from "slugify";
+const route = useRoute();
+
 const props = defineProps({
   content: {
     type: Object,
@@ -19,15 +28,9 @@ const props = defineProps({
   },
 });
 
-const { data: blocks, pending } = await useFetch("/api/block", {
+const { data: blocks, pending } = await useFetch("/api/blocks", {
   body: {
     blockId: props.content.id,
   },
 });
-
-const getSlug = (block) => {
-  const plainText = block.paragraph.rich_text[0].plain_text;
-  const slug = slugify(plainText).toLowerCase();
-  return slug;
-};
 </script>

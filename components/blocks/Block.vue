@@ -60,6 +60,18 @@
     v-else-if="content.type === 'child_page'"
     :content="content"
   />
+  <BlocksLinkToPage
+    v-else-if="content.type === 'link_to_page'"
+    :content="content"
+  />
+  <BlocksColumnList
+    v-else-if="content.type === 'column_list'"
+    :content="content"
+  />
+  <BlocksColumn
+    v-else-if="content.type === 'column'"
+    :content="content"
+  />
   <BlocksUnsupported v-else :content="content" />
 </template>
 
