@@ -72,6 +72,10 @@
     v-else-if="content.type === 'column'"
     :content="content"
   />
+  <BlocksSyncedBlock
+    v-else-if="content.type === 'synced_block'"
+    :content="content"
+  />
   <BlocksUnsupported v-else :content="content" />
 </template>
 

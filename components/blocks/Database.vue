@@ -1,12 +1,7 @@
 <template>
   <ul>
     <li v-for="(item, index) in database" :key="'post-' + index">
-      <a v-if="item.properties.folder.select == null" :href=" '/' + item.properties.slug.formula.string.toLowerCase()">
-        <BlocksImageCover :cover="item.cover" v-if="item.cover !== null" />
-        <BlocksHeading3 :content="item.properties.Name.title" />
-        <BlocksParagraph :content="item.properties.Description.rich_text" />
-      </a>
-      <a v-else :href="'/' + item.properties.folder.select.name + '/' + item.properties.slug.formula.string.toLowerCase()">
+      <a  :href=" '/' + item.properties.slug.formula.string.toLowerCase()">
         <BlocksImageCover :cover="item.cover" v-if="item.cover !== null" />
         <BlocksHeading3 :content="item.properties.Name.title" />
         <BlocksParagraph :content="item.properties.Description.rich_text" />
