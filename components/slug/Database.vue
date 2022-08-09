@@ -1,11 +1,10 @@
 <template>
   <h1>All articles</h1>
   <ul>
-    <li v-for="(item, index) in content">
+    <li v-for="(item, index) in content" :key="'page-'+ index">
       <a :href="'/' + item.properties.slug.formula.string.toLowerCase()">
         <BlocksImageCover :cover="item.cover" v-if="item.cover !== null" />
-        <BlocksHeading3 :content="item.properties.Name.title" />
-        <BlocksParagraph :content="item.properties.Description.rich_text" />
+        <h3>{{item.properties.Name.title[0].plain_text}}</h3>
       </a>
     </li>
   </ul>

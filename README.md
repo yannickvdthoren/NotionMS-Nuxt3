@@ -6,7 +6,7 @@
 
 1. Fork the project
 2. In the terminal go to the folder and launch `npm i`
-3. Launch `npm dev` to start your project
+3. Launch `npm run dev` to start your project
 
 ### Setup the .env
 

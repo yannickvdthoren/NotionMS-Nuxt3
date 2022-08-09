@@ -1,15 +1,15 @@
 <template>
   <BlocksHeading1
     v-if="content.type === 'heading_1'"
-    :content="content.heading_1.rich_text"
+    :content="content"
   />
   <BlocksHeading2
     v-else-if="content.type === 'heading_2'"
-    :content="content.heading_2.rich_text"
+    :content="content"
   />
   <BlocksHeading3
     v-else-if="content.type === 'heading_3'"
-    :content="content.heading_3.rich_text"
+    :content="content"
   />
   <BlocksParagraph
     v-else-if="content.type === 'paragraph'"
@@ -37,20 +37,7 @@
   />
   <BlocksToDo v-else-if="content.type === 'to_do'" :content="content.to_do" />
   <BlocksImage v-else-if="content.type === 'image'" :content="content.image" />
-  <BlocksDetails
-    v-else-if="
-      content.type === 'toggle' &&
-      content.toggle.rich_text[0].plain_text != 'Menu'
-    "
-    :content="content"
-  />
-  <BlocksMenu
-    v-else-if="
-      content.type === 'toggle' &&
-      content.toggle.rich_text[0].plain_text == 'Menu'
-    "
-    :content="content"
-  />
+  <BlocksDetails v-else-if="content.type === 'toggle'" :content="content" />
   <BlocksTable v-else-if="content.type === 'table'" :content="content.table" />
   <BlocksDatabase
     v-else-if="content.type === 'child_database'"
@@ -75,8 +62,9 @@
   <BlocksSyncedBlock
     v-else-if="content.type === 'synced_block'"
     :content="content"
-  />
+  /> 
   <BlocksUnsupported v-else :content="content" />
+
 </template>
 
 <script setup>
