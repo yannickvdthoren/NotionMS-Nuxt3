@@ -19,6 +19,7 @@
     
     ```NOTION_API='jzfazkbfkazefb...'```
 7. Copy the web link of your page/database in Notion and keep only the key at the end. 
-   Exemple: In this link "https://cheddar-roll-998.notion.site/Nuxt-3-blog-bbe33534f06547fba8f81498528b0127" the key is: bbe33534f06547fba8f81498528b0127.
+   
+   Exemple: In this link https://cheddar-roll-998.notion.site/Nuxt-3-blog-bbe33534f06547fba8f81498528b0127 the key is: bbe33534f06547fba8f81498528b0127.
     
     ```PAGE_ID='mezrshgmajzg...'```
