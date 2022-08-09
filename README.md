@@ -16,6 +16,6 @@
 4. Toggle the "Share on web" option
 5. Create a .env file at the root of your project
 6. Copy and paste your Notion api key in it. 
-    NOTION_API='jzfazkbfkazefb...'
+    ```NOTION_API='jzfazkbfkazefb...'```
 7. Copy the web link of your page/database in Notion and keep only the last part after '-'.
-    PAGE_ID='mezrshgmajzg...'
+    ```PAGE_ID='mezrshgmajzg...'
