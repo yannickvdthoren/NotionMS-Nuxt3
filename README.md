@@ -1,6 +1,6 @@
 # NotionMS-Nuxt3
  
- NotionMS is a frontend application build on top of (Nuxt 3)[https://v3.nuxtjs.org/] and using (Notion)[https://www.notion.so/] as a backend via it's api.
+ NotionMS is a frontend application build on top of [Nuxt 3](https://v3.nuxtjs.org/) and using (Notion)[https://www.notion.so/] as a backend via it's api.
 
 ## Launch
 
