@@ -1,6 +1,6 @@
 # NotionMS-Nuxt3
  
- NotionMS is a frontend application build on top of [Nuxt 3](https://v3.nuxtjs.org/) and using (Notion)[https://www.notion.so/] as a backend via it's api.
+ NotionMS is a frontend application build on top of [Nuxt 3](https://v3.nuxtjs.org/) and using [Notion](https://www.notion.so/) as a backend via it's api.
 
 ## Launch
 
@@ -10,7 +10,7 @@
 
 ### Setup the .env
 
-1. Go to (Notion for developers)[https://developers.notion.com/] and creare a new integration.
+1. Go to [Notion for developers](https://developers.notion.com/) and creare a new integration.
 2. Launch Notion and create a new page or database
 3. Click on Share on the top left corner of Notion and in the invite box find your Notion integration
 4. Toggle the "Share on web" option
